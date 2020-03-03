@@ -1,0 +1,29 @@
+def reverse(matrix):
+    for i in range(0,N):
+         j=0
+         k=N-1
+         while j<k:
+           t=matrix[i][j]
+           matrix[i][j]=matrix[i][k]
+           matrix[i][k]=t 
+           j+=1 
+           k-=1 
+    print("\n")
+    for i in range(0,N):
+      for j in range(0,N):
+          print(matrix[i][j],end=" ")
+      print("\n")
+def transpose(matrix): 
+       for i in range(0,N):
+         for j in range(i,N):
+            t=matrix[i][j]
+            matrix[i][j]=matrix[j][i]
+            matrix[j][i]=t 
+N=int(input())
+matrix=[]
+for i in range(0,N):
+     l=[]
+     l=[int(x) for x in input().split()]
+     matrix.append(l)
+transpose(matrix) 
+reverse(matrix) 
