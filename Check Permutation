@@ -1,0 +1,18 @@
+def isPermutation(str1,str2):
+  no_char=256
+  per1=[0]*no_char 
+  per2=[0]*no_char
+  for i in range(len(str1)):
+    per1[ord(str1[i])]+=1 
+  for i in range(len(str2)):
+    per2[ord(str2[i])]+=1
+  for i in range(0,no_char):
+    if per1[i]!=per2[i]:
+          return False
+  return True
+str1=input()
+str2=input()
+if isPermutation(str1,str2):
+  print("yes")
+else:
+ print("no")
