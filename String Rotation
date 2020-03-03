@@ -1,0 +1,13 @@
+def stringrotation(string3,string2): 
+  if string2  in string3:
+    return True 
+  else:
+    return False
+string1=input()
+string2=input() 
+string3=string1+string1
+sts=stringrotation(string3,string2)
+if sts:
+  print("yes")
+else:
+  print("no")
