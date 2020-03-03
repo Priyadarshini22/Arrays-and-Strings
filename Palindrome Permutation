@@ -1,0 +1,15 @@
+def isPalindrome(str1):
+  l=[]
+  for i in range(len(str1)):
+          if str1[i] not in l:
+             l.append(str1[i])
+          else:
+            l.remove(str1[i])
+  if len(str1)%2==0 and len(l)==0 or len(str1)%2==1 and len(l)==1:
+        return True
+  return False
+str1=input()
+if isPalindrome(str1):
+  print("yes")
+else:
+ print("no")
