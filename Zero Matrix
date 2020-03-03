@@ -1,0 +1,29 @@
+def zero(l1): 
+  row=[0]*R 
+  col=[0]*C 
+  for i in range(0,R):
+    row[i]=1 
+  for j in range(0,C):
+    col[j]=1 
+  for i in range(0,R):
+    for j in range(0,C):
+      if l1[i][j]==0:
+          row[i]=0
+          col[j]=0 
+  for i in range(0,R):
+    for j in range(0,C):
+      if row[i]==0 or col[j]==0:
+          l1[i][j]=0  
+  print("\n")
+  for i in range(0,R):
+    for j in range(0,C):
+       print(l1[i][j],end=" ")
+    print("\n")
+R=int(input())
+C=int(input()) 
+l1=[]
+for i in range(0,R):
+  l=[] 
+  l=[int(x) for x in input().split()]
+  l1.append(l) 
+zero(l1)
